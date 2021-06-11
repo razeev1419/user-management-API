@@ -12,6 +12,8 @@ Documentation for creating a Rest API for CRUD operations through SQLite and Swa
 >```$ https://github.com/razeev1419/user-management-API.git```
 ### Change the directory
 >```$ cd user-management-API/```
+  - app.py - Source code for API python file
+  - test.py - Unitests python file
 ### Install required packages to run Web API
 >```$ pip3 install -r requirement.txt```
 ### Make sure to check for below packages
