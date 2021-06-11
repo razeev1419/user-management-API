@@ -1,3 +1,4 @@
+from logging import debug
 from flask import Flask , request , jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
@@ -35,8 +36,7 @@ model = api.model("User management Web API ",{
 # Intanciating the schema
 heros_schema = Schema(many=True)
 
-# Routes for CRUD operation of Heros
-
+# Routes for CRUD operation of Users
 @api.route('/get')
 class getdata(Resource):
     def get(self):
@@ -81,3 +81,5 @@ class deletedata(Resource):
         return {'message': 'Data is deleted from database'}
 
 
+if __name__ == 'main':
+    app.run(debug=True)
