@@ -43,3 +43,6 @@ Coded basic testcases for the '/get' request
 - testcase3 - Check data returned with the expected message
 ### Run the testcases from VScode / use below command
 ```$ python test.py```
+
+## Image of API
+![API](Images/2021-06-11_21-52.png)
