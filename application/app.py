@@ -20,19 +20,22 @@ class Hero(db.Model):
     password = db.Column(db.String)
 
 # Schema of database
-class HeroSchema(ma.Schema):
+class Schema(ma.Schema):
     class Meta:
         fields = ('id','fname','lname','password')
 
-
+# Initializing the model of entries
 model = api.model("User management Web API ",{
     'fname': fields.String('Enter Hero First Name'),
     'lname': fields.String('Enter Hero Last Name'),
     'password': fields.String('Enter password')
 })
 
-heros_schema = HeroSchema(many=True)
 
+# Intanciating the schema
+heros_schema = Schema(many=True)
+
+# Routes for CRUD operation of Heros
 
 @api.route('/get')
 class getdata(Resource):
@@ -47,7 +50,9 @@ class getdata(Resource):
 class postdata(Resource):
     @api.expect(model)
     def post(self):
-        data = Hero(fname=request.json['fname'],lname=request.json['lname'],password=request.json['password'])
+        data = Hero(fname=request.json['fname'],
+                    lname=request.json['lname'],
+                    password=request.json['password'])
         db.session.add(data)
         db.session.commit()
         return {'message': 'Data added to database'}
