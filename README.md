@@ -5,9 +5,9 @@ Documentation for creating a Rest API for CRUD operations through SQLite and Swa
 ## Prerequisites
 - IDE - VScode _(Install VSCode for better experience)_
 - OS - RHEL
-- Python 3.6.8
-- Flask 1.1.0
-- Werkzeug 2.0.1
+- Python (3.6.8)
+- Flask (1.1.0)
+- Werkzeug (0.16.1)
 - flask-marshmallow (0.14.0)
 - Flask-RESTful (0.3.9)
 - flask-restplus (0.13.0)
