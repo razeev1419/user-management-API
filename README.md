@@ -5,7 +5,14 @@ Documentation for creating a Rest API for CRUD operations through SQLite and Swa
 ## Prerequisites
 - IDE - VScode _(Install VSCode for better experience)_
 - OS - RHEL
-- Python - 3.6
+- Python 3.6.8
+- Flask 1.1.0
+- Werkzeug 2.0.1
+- flask-marshmallow (0.14.0)
+- Flask-RESTful (0.3.9)
+- flask-restplus (0.13.0)
+- Flask-SQLAlchemy (2.5.1)
+
 
 ## Run the API
 ### [Git Clone](https://github.com/razeev1419/user-management-API.git)
@@ -16,6 +23,7 @@ Documentation for creating a Rest API for CRUD operations through SQLite and Swa
   - test.py - Unitests python file
 ### Install required packages to run Web API
 >```$ pip3 install -r requirement.txt```
+ _If this  command fails please install below packages manually_
 ### Make sure to check for below packages
 >```$ pip3 install flask flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy flask-restplus```
 ### Export before running application
